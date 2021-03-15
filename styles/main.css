@@ -20,7 +20,6 @@ body {
 
 /* Main Enclosing Div */
 .main_div {
-  /* border: 1px solid black; */
   margin: 1rem;
   margin-bottom: 3rem;
 }
@@ -28,14 +27,14 @@ body {
   font-size: 1rem;
   width: 1.5rem;
 }
-/* Add Note */
+/* Add Note Btn*/
 .add_note_btn {
   position: absolute;
   font-size: 1.25rem;
   background-color: white;
   color: black;
-  padding: 0.5rem;
-  border-radius: 50%;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
   right: 2%;
   bottom: 2%;
   cursor: pointer;
@@ -45,13 +44,6 @@ body {
   background-color: #2ec4b6;
 }
 
-/* Notes Section */
-.notes_container {
-  margin: 1rem;
-}
-.test {
-  /* border: 1px solid blue; */
-}
 /* Notes Section -- Card */
 .card {
   border: none;
@@ -99,7 +91,6 @@ body {
 .overlay {
   position: fixed;
   height: 98vh;
-  max-width: 800px;
   padding-bottom: 1rem;
   z-index: 998;
   display: none;

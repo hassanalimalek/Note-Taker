@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./styles/spinner.css">
 </head>
 <body>
+
+    <!-- Loading Animation -->
     <div class="loading_animation">
         <div class="loading_animation_wrapper">
             <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -55,16 +57,14 @@
         </div>
     </div>
    
-
-
+    <!-- Main Markup -->
     <div class="main_div">
         <h1><span>
-            <!-- <img class="app_icon" src="https://img.icons8.com/pastel-glyph/64/000000/note.png"/> -->
             <i class="fas fa-pen-square "></i>
         </span> Note Taker</h1>
     </div>
 
-
+    <!-- Add Note Overlay -->
     <div class="overlay">
         <i class="fas fa-times overlay_exit_btn"></i>
         <div class="overlay_wrapper">
@@ -78,10 +78,11 @@
             </form>
         </div>
     </div>
+    <!-- Edit Note Overlay -->
     <div class="overlay note_edit_overlay">
         <i class="fas fa-times note_edit_exit_btn overlay_exit_btn"></i>
         <div class="overlay_wrapper note_edit_overlay">
-            <h1 class="overlay_title">Edit the Note</h1>
+            <h1 class="overlay_title">Edit Note</h1>
             <form class="note_form note_edit_form">
                 <label for="note_title">Note Title</label>
                 <input name="note_title"type="text" required>
@@ -91,6 +92,7 @@
             </form>
         </div>
     </div>
+    <!-- Notes Container -->
     <div class="notes_container">
         <div class="notes_wrapper container">
             <div class="row notes_row">
@@ -122,13 +124,7 @@
         </div>
     </div>
 
-    
-
-
-
-    
-
-    <!-- Add note Button -->
+    <!-- Add Note Button -->
     <i class="fas fa-plus add_note_btn"></i>
   
 

@@ -1,16 +1,15 @@
+// Overlay
 let overlay_exit = document.querySelector('.overlay_exit_btn');
 let overlay = document.querySelector('.overlay')
 
-
+// Add and Edit Form
 let add_note_btn = document.querySelector('.add_note_btn');
 let notes_row = document.querySelector('.notes_row');
 let note_form = document.querySelector('.note_form');
 let note_submit_btn = document.querySelector('.note_submit_btn');
-
 let note_edit_form = document.querySelector('.note_edit_form')
 let note_edit_overlay = document.querySelector('.note_edit_overlay');
 let note_changes_submit = document.querySelector('.note_changes_submit');
-// loading animation
 let loading_animation = document.querySelector('.loading_animation');
 
 
@@ -19,7 +18,7 @@ var saved_notes = localStorage.getItem('allNotes');
 if(saved_notes){
   notes_row.innerHTML = saved_notes;
 }
-
+// Animation Close timeout
 setTimeout(function(){
   loading_animation.style.display = 'none';
 },2000)
@@ -50,8 +49,7 @@ notes_row.addEventListener('click', (e)=>{
     localStorage.setItem("allNotes",notes_row.innerHTML);
   }
 })
-
-// Submitting Note Changes 
+// Note Changes Submission
 note_changes_submit.addEventListener('click',(e)=>{
   e.preventDefault();
   let note_title = note_edit_form.note_title.value;
@@ -59,10 +57,10 @@ note_changes_submit.addEventListener('click',(e)=>{
   edit_note_ref.innerHTML = `<div class="card-header">
   <div class="card-header_title">
     <h3>${note_title}</h3>
-    <div class="card-header_icons note_icon">
-       <i class="far fa-edit note_icon"></i>
-       <i class="fas fa-trash-alt"></i>
-    </div>
+    <div class="card-header_icons">
+    <i class="far fa-edit edit_icon note_icon"></i>
+    <i class="fas fa-trash-alt note_icon delete_icon"></i>
+ </div>
   </div>
 </div>
 <div class="card-body">
@@ -93,7 +91,7 @@ note_edit_exit_btn.addEventListener('click',()=>{
   note_edit_overlay.style.display='none'
 })
 
-// New Note Form Submit
+// New Note Form Submission
 note_submit_btn.addEventListener('click',(e)=>{
     e.preventDefault();
     console.log("Submitting Form")
@@ -106,10 +104,10 @@ note_submit_btn.addEventListener('click',(e)=>{
         <div class="card-header">
           <div class="card-header_title">
             <h3>${note_title}</h3>
-            <div class="card-header_icons note_icon">
-               <i class="far fa-edit note_icon"></i>
-               <i class="fas fa-trash-alt"></i>
-            </div>
+            <div class="card-header_icons">
+            <i class="far fa-edit edit_icon note_icon"></i>
+            <i class="fas fa-trash-alt note_icon delete_icon"></i>
+          </div>
           </div>
         </div>
         <div class="card-body">
