@@ -11,6 +11,7 @@ let note_edit_form = document.querySelector('.note_edit_form')
 let note_edit_overlay = document.querySelector('.note_edit_overlay');
 let note_changes_submit = document.querySelector('.note_changes_submit');
 let loading_animation = document.querySelector('.loading_animation');
+let example_note_date= document.querySelector('.example_note_date')
 
 
 // Getting Notes from local Storage.
@@ -29,6 +30,9 @@ let get_date =()=>{
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 }
+// Setting example note date.
+let curr_date = get_date();
+example_note_date.innerText=curr_date;
 
 // Edit Note and Delete Note
 let edit_note_ref = null;
