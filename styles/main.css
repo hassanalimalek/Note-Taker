@@ -1,0 +1,149 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* Globals */
+:root {
+  --primary-color: #14213d;
+  --secondary-color: #0077b6;
+  --main-transition: 1s all;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Lato", sans-sarif;
+}
+
+/* Main Enclosing Div */
+.main_div {
+  /* border: 1px solid black; */
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+.app_icon {
+  font-size: 1rem;
+  width: 1.5rem;
+}
+/* Add Note */
+.add_note_btn {
+  position: absolute;
+  font-size: 1.25rem;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 50%;
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.add_note_btn:hover {
+  background-color: #2ec4b6;
+}
+
+/* Notes Section */
+.notes_container {
+  margin: 1rem;
+}
+.test {
+  /* border: 1px solid blue; */
+}
+/* Notes Section -- Card */
+.card {
+  border: none;
+}
+.card-header {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.card-header_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-header_icons {
+  align-self: center;
+}
+.card-body {
+  color: black;
+}
+.note_icon {
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
+.edit_icon,
+.delete_icon {
+  transition: var(--main-transition);
+}
+.edit_icon:hover,
+.delete_icon:hover {
+  color: #2ec4b6;
+  font-size: 1.3rem;
+}
+.delete_icon:hover {
+  color: #e71d36;
+}
+
+/* Overlay */
+.overlay_exit_btn {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 2%;
+  top: 1%;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  height: 98vh;
+  max-width: 800px;
+  padding-bottom: 1rem;
+  z-index: 998;
+  display: none;
+  transition: var(--main-transition);
+  top: 2%;
+  left: 10%;
+  right: 10%;
+  background-color: #00509d;
+  border-radius: 0.6rem;
+}
+label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.overlay_wrapper {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+.overlay_title {
+  margin-bottom: 1rem;
+}
+.overlay form input,
+.overlay form textarea {
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  color: black;
+  /* word-spacing: 2px; */
+  margin-bottom: 30px;
+}
+.form_btn {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.form_btn:hover {
+  background-color: #444;
+  color: #fff;
+}

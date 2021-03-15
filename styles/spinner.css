@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background: #e74c3c; */
+  /* text-align: center; */
+  /* font-family: "Comfortaa", cursive; */
+}
+.loading_animation {
+  position: fixed;
+  background-color: black;
+  margin: 0;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loading_animation_wrapper {
+  position: fixed;
+  left: 45%;
+  top: 45%;
+}
+.loading_animation_text {
+  margin: 1rem;
+  margin-left: -30%;
+}
+svg {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.made-with-love {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
