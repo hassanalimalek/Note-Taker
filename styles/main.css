@@ -29,7 +29,7 @@ body {
 }
 /* Add Note Btn*/
 .add_note_btn {
-  position: absolute;
+  position: fixed;
   font-size: 1.25rem;
   background-color: white;
   color: black;
