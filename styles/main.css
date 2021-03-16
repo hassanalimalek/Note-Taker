@@ -30,13 +30,14 @@ body {
 /* Add Note Btn*/
 .add_note_btn {
   position: fixed;
+  z-index: 999;
   font-size: 1.25rem;
   background-color: white;
   color: black;
   padding: 0.4rem;
   border-radius: 0.3rem;
   right: 2%;
-  bottom: 2%;
+  bottom: 1%;
   cursor: pointer;
   transition: var(--main-transition);
 }
