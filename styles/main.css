@@ -91,14 +91,15 @@ body {
 .overlay {
   position: fixed;
   overflow: auto;
-  height: 95vh;
+  height: 90vh;
   padding-bottom: 1rem;
   z-index: 998;
   display: none;
   transition: var(--main-transition);
-  top: 2%;
+  top:5%;
   left: 10%;
   right: 10%;
+  
   background-color: #00509d;
   border-radius: 0.6rem;
 }
@@ -145,6 +146,8 @@ label {
 @media (max-width: 525px){
   .overlay {
     margin-bottom: 0.25rem;
+    left:5%;
+    right: 5%;
   }
   .overlay_wrapper {
     width:90%;
