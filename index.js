@@ -60,7 +60,9 @@ else{
   let obj = {
     id:'test',
     title:'Test Note',
-    description:`Your go-to app for taking notes 
+    description:`
+    Welcome to Note Taker
+    Your go-to app for taking notes.
     1) Click on plus icon to add a new note.
     2) Click on edit icon to edit a note.
     3) Trash Icon to delete a note`
