@@ -1,15 +1,14 @@
-// Overlay
+// Overlay and Form
 let overlay_exit = document.querySelector('.overlay_exit_btn');
 let overlay = document.querySelector('.overlay')
-
-// Add and Edit Form
 let add_note_btn = document.querySelector('.add_note_btn');
 let notes_row = document.querySelector('.notes_row');
-let note_form = document.querySelector('.note_form');
-let note_submit_btn = document.querySelector('.note_submit_btn');
+let note_add_form = document.querySelector('.note_add_form');
+
 let note_edit_form = document.querySelector('.note_edit_form')
 let note_edit_overlay = document.querySelector('.note_edit_overlay');
-let note_changes_submit = document.querySelector('.note_changes_submit');
+
+// Animation
 let loading_animation = document.querySelector('.loading_animation');
 
 
@@ -70,7 +69,6 @@ else{
   let arr = [obj];
   localStorage.setItem("allnotes",JSON.stringify(arr));
   showNotes();
-  
 }
 
 // Animation Close timeout
@@ -104,7 +102,7 @@ notes_row.addEventListener('click', (e)=>{
 })
 
 // Note Changes Submission
-note_changes_submit.addEventListener('click',(e)=>{
+note_edit_form.addEventListener('submit',(e)=>{
   e.preventDefault();
   // User Inputs
   let note_title = note_edit_form.note_title.value;
@@ -136,10 +134,10 @@ note_edit_exit_btn.addEventListener('click',()=>{
 
 
 // New Note Form Submission
-note_submit_btn.addEventListener('click',(e)=>{
+note_add_form.addEventListener('submit',(e)=>{
     e.preventDefault();
-    let note_title = note_form.note_title.value;
-    let note_description = note_form.note_description.value;
+    let note_title = note_add_form.note_title.value;
+    let note_description = note_add_form.note_description.value;
     let randNumber = Math.round(Math.random() * 999);
     let id = note_title + randNumber;
     let obj = {
@@ -153,7 +151,7 @@ note_submit_btn.addEventListener('click',(e)=>{
     localStorage.setItem("allnotes",JSON.stringify(arr));
     showNotes();
     overlay.style.display = 'none';
-    note_form.reset();
+    note_add_form.reset();
 })
 
 
